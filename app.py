@@ -13,7 +13,7 @@ import tiktoken
 load_dotenv()
 
 api = st.secrets["OPENAI_API_KEY"]
-console.log(api)
+print(api)
 
 # Initialize the OpenAI client
 client = OpenAI(api_key=api)
