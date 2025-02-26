@@ -12,9 +12,11 @@ import tiktoken
 # Load environment variables
 load_dotenv()
 
+api = st.secrets["OPENAI_API_KEY"]
+console.log(api)
 
 # Initialize the OpenAI client
-client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+client = OpenAI(api_key=api)
 
 # Tiktoken encoding for token counting
 encoding = tiktoken.get_encoding("cl100k_base")
